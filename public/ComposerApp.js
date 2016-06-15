@@ -10,7 +10,6 @@
     var composerSetCount = content.getElementsByClassName("ComposerSet").length;
    
     for (var index = 0; index < composerSetCount; index++) {
-
         var composerSet = content.getElementsByClassName("ComposerSet")[index].innerHTML;
         var composersAsElements = htmlToElements(composerSet);
 
@@ -59,11 +58,10 @@
             theComposer.dateOfBirth = dob;
         }
 
-         var dod = new Date(composerParts[3]);
+        var dod = new Date(composerParts[3]);
         if (dod.isValid()) {
             theComposer.dateOfDeath = dod;
         }
-
 
         composersx.push(theComposer);
         console.log(theComposer);

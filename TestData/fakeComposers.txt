@@ -1,0 +1,17 @@
+[
+  {
+    'repeat(3,3)': {
+       name: {
+        first: '{{firstName()}}',
+        last: '{{surname()}}'
+      },
+      dateOfBirth: '{{moment(this.date(new Date(1684, 0, 1), new Date(1722, 0, 1))).format("L")}}',
+      dateOfDeath: '{{moment(this.date(new Date(1722, 0, 2), new Date(1801, 0, 1))).format("L")}}',     
+      composer: function (tags) {
+        return this.name.last.toUpperCase() + ', ' + this.name.first + 
+          ' (' + this.dateOfBirth + ' - ' + this.dateOfDeath + ') ' ;
+      }
+    }
+  }
+]
+http://beta.json-generator.com/Nk44h5qVb
