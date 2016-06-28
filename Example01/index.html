@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="composerApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>England 1, Iceland 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.js"> </script>
+    <!-- http://getbootstrap.com/css/#tables-condensed -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"></link>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+</head>
+
+<body ng-controller="composerCtrl as composerController">
+    {{composerController.message}}<br/>
+    <table>
+        <tr ng-repeat="player in composerController.footballers">
+            <td>{{player.$$hashkey}}</td>
+            <td>{{$first}}</td>
+            <td>{{$index}}</td>
+            <td>{{$odd}}</td>
+            <td><span ng-bind="player.name"></span></td>
+        </tr>
+    </table>
+{{composerController.footballers[0].name}} <br/> {{22/33}}
+</body>
+
+</html>
